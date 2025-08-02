@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#ui {
+    display: flex;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+#timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4444;
+}
+
+#cloneCount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #44ff44;
+}
+
+#gameStatus {
+    font-size: 16px;
+    color: #ffff44;
+}
+
+#gameCanvas {
+    border: 3px solid #00ff88;
+    border-radius: 10px;
+    background: #0a0a0a;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+#controls {
+    display: flex;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #666;
+}
+
+.control-group h3 {
+    color: #00ff88;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.control-group p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.control-group strong {
+    color: #ffff44;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #00ff88;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+}
+
+.modal-content h2 {
+    color: #ff4444;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#restartBtn {
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restartBtn:hover {
+    background: linear-gradient(135deg, #00cc66, #00aa44);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Game entity colors for reference */
+.scientist { color: #00ff88; }
+.clone { color: #ffaa00; }
+.clone-degraded { color: #ff6600; }
+.puzzle-element { color: #4488ff; }
+.hazard { color: #ff4444; }

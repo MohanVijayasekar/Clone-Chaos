@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Chaos - Survival Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="ui">
+            <div id="timer">Time: <span id="timeLeft">120</span>s</div>
+            <div id="cloneCount">Clones: <span id="cloneCounter">0</span></div>
+            <div id="gameStatus">Navigate the lab and escape!</div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="controls">
+            <div class="control-group">
+                <h3>Controls</h3>
+                <p><strong>WASD</strong> - Move Scientist</p>
+                <p><strong>SPACE</strong> - Interact with Objects</p>
+                <p><strong>R</strong> - Restart Game</p>
+            </div>
+            <div class="control-group">
+                <h3>Objective</h3>
+                <p>Escape the lab before it implodes!</p>
+                <p>Use your clones to solve puzzles.</p>
+                <p>Clones spawn every 10 seconds.</p>
+            </div>
+        </div>
+        
+        <div id="gameOver" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <p id="gameOverMessage">The laboratory has imploded!</p>
+                <button id="restartBtn">Restart Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Vector2.js"></script>
+    <script src="js/ActionRecorder.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Clone.js"></script>
+    <script src="js/CloneManager.js"></script>
+    <script src="js/PuzzleSystem.js"></script>
+    <script src="js/GameTimer.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
